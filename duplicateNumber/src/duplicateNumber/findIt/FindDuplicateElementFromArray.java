@@ -21,22 +21,21 @@ public class FindDuplicateElementFromArray {
 		
 		int array[] = {1, 2, 3, 4, 2, 3, 7, 1, 2, 2};
 		
-		int count = 0;
+		
+		/*
+		 * une methodedefairevec  lamethode contains
+		 */
+		Set<Integer> temporaryElement = new HashSet<Integer>();
 		
 		Set<Integer> duplicateElement = new HashSet<Integer>();
 		
 		for(int i = 0; i <array.length; i++) {
-			int elementThisPosition = array[i];
 			
-			count = 0;
-			for(int j = 0; j <array.length; j++) {
-				if(elementThisPosition == array[j]) {
-					count++;
-				}	
-			}
-			if(count > 1) {
-				duplicateElement.add(elementThisPosition);
-			}
+				if(!temporaryElement.contains(array[i])) {
+					temporaryElement.add(array[i]);
+				}else
+					duplicateElement.add(array[i]);
+				
 		}
 		System.out.println("Voici  les element qui ont des doublons. " + duplicateElement.toString());
 	}
