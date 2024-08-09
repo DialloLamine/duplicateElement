@@ -33,11 +33,18 @@ public class FindDuplicateElementFromArray {
 			
 				if(!temporaryElement.contains(array[i])) {
 					temporaryElement.add(array[i]);
-				}else
-					duplicateElement.add(array[i]);
-				
+				}
+				/*
+				 * else duplicateElement.add(array[i]);
+				 */
 		}
-		System.out.println("Voici  les element qui ont des doublons. " + duplicateElement.toString());
+		/*
+		 * System.out.println("Voici  les element qui ont des doublons. " +
+		 * duplicateElement.toString());
+		 */
+		
+		System.out.println("Voici  les element qui ont des doublons. " + temporaryElement.toString());
+		
 	}
 
 }
