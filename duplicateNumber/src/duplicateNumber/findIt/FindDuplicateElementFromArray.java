@@ -19,7 +19,7 @@ public class FindDuplicateElementFromArray {
 		
 		//int array[] = {1, 2, 3, 4, 2, 3, 7, 1};
 		
-		int array[] = {1, 2, 3, 4, 2, 3, 7, 1, 2, 2};
+		int array[] = {1, 2, 3, 4, 5, 2,6, 3, 7, 1, 2, 2};
 		
 		
 		/*
@@ -27,16 +27,16 @@ public class FindDuplicateElementFromArray {
 		 */
 		Set<Integer> temporaryElement = new HashSet<Integer>();
 		
-		Set<Integer> duplicateElement = new HashSet<Integer>();
+		//Set<Integer> duplicateElement = new HashSet<Integer>();
 		
 		for(int i = 0; i <array.length; i++) {
 			
 				if(!temporaryElement.contains(array[i])) {
 					temporaryElement.add(array[i]);
 				}
-				/*
-				 * else duplicateElement.add(array[i]);
-				 */
+			
+				  //else temporaryElement.add(array[i]);
+				 
 		}
 		/*
 		 * System.out.println("Voici  les element qui ont des doublons. " +
